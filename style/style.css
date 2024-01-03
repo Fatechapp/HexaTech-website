@@ -1,0 +1,277 @@
+/*UTILITY*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+:root {
+    --white: #F7F7F7;
+    --black: #141414;
+    --green: #24BD86;
+    --blue: #0D567F;
+    --orange: #BD7724;
+}
+
+/*FONT UTILITY*/
+html {
+    font-size: 16px;
+}
+h1 {
+    font-weight: 800;
+    font-size: 2.75rem;
+}
+h2 {
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+h3 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+h4 {
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+h5 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+p, a {
+    font-weight: 400;
+    font-size: 1rem;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+}
+
+/*NAVBAR*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 1rem;
+    left: 0;
+    right: 0;
+}
+#navbar {
+    width: 75rem;
+
+    border: 1px solid #000;
+    border-radius: 1.8rem;
+    background: linear-gradient(93deg, rgba(20, 20, 20, 0.50) 32.55%, rgba(20, 20, 20, 0.40) 70.42%);
+    backdrop-filter: blur(20px);
+}
+.navigation-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4rem;
+}
+.navigation-content-left img {
+    width: 10rem;
+}
+.navigation-content-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.navigation-content-right a {
+    color: var(--white);
+    transition: 0.15s ease-in-out;
+}
+.navigation-content-right a:hover {
+    transition: 0.15s ease-in-out;
+}
+.navigation-content-right a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--green);
+    transform: scaleX(0);
+    transition: 0.15s ease-in-out;
+}
+.navigation-content-right a:hover::after {
+    transform: scaleX(1);
+    transition: 0.15s ease-in-out;
+}
+.hamburger-menu {
+    display: none;
+}
+
+/*HERO SECTION*/
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: url("../asset/hero-image.png") no-repeat;
+    background-size: cover;
+    background-position-y: -16rem;
+    color: var(--white);
+}
+#hero:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(263deg, rgba(0, 0, 0, 0.00) -51.47%, #000 118.19%);
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 65rem;
+    gap: 3rem;
+    z-index: 1;
+    margin: 6rem 0 0 0;
+}
+.bottom-hero-content {
+    height: 5rem;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: justify;
+}
+.bottom-hero-content img {
+    width: 1.5rem;
+    transition: 0.15s ease-in-out;
+}
+.bottom-hero-content img:hover {
+    transform: translateY(-0.5rem);
+    transition: 0.15s ease-in-out;
+}
+.hero-content p {
+    max-width: 30rem;
+    text-align: justify;
+}
+
+/*ABOUT US*/
+#about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 20rem;
+    background: url("../asset/pattern-3.png");
+    mix-blend-mode: multiply;
+}
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 5rem;
+
+    position: relative;
+    top: 3rem;
+    max-width: 40rem;
+    text-align: justify;
+}
+.company-glimpse {
+    display: flex;
+    flex-wrap: wrap;
+    width: 36rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    top: 5.5rem;
+}
+.glimpse-box {
+    width: 12rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--white);
+}
+.glimpse-box h3 {
+    font-size: 3rem;
+}
+.glimpse-box.one {
+    background: var(--green);
+}
+.glimpse-box.two {
+    background: var(--orange);
+}
+.glimpse-box.three {
+    background: var(--blue);
+}
+
+/*SERVICE*/
+#services {
+    padding-top: 9rem;
+}
+/*MEDIA QUERIES*/
+@media (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+
+    /*NAVBAR*/
+    #navbar {
+        width: 25rem;
+    }
+    .navigation-content-right {
+        position: absolute;
+        top: 100%;
+        right: -200%;
+        background: var(--black);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.35s ease-in-out;
+        flex-direction: column;
+    }
+    .navigation-content-right.active {
+        right: -5rem;
+        transition: 0.35s ease-in-out;
+    }
+    .navigation-content-right a {
+        display: block;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+    .hamburger-menu {
+        color: var(--white);
+        display: block;
+        transition: 0.35s ease-in-out;
+    }
+    .hamburger-menu.active {
+        color: var(--blue);
+        transition: 0.35s ease-in-out;
+    }
+
+    /*HERO SECTION*/
+    #hero {
+        height: 50vh;
+        background-position-y: 0rem;
+    }
+    .hero-content {
+        margin: 0 5rem 0 5rem;
+    }
+    #hero::after {
+        top: 0;
+        height: 80vh;
+    }
+
+    /*ABOUT US*/
+    #about-us {
+        height: 100%;
+    }
+    .company-glimpse {
+        width: 12rem;
+    }
+}
