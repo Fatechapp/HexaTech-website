@@ -401,6 +401,7 @@ nav {
 .partner-list {
     width: 70rem;
     overflow: scroll;
+
 }
 .partner-list::-webkit-scrollbar {
     height: 0.3rem;
@@ -449,7 +450,116 @@ nav {
 .partner-card p {
     font-size: 0.8rem;
 }
+.list-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.square {
+    width: 1rem;
+    height: 1rem;
+}
+.square:nth-child(1) {
+    background: var(--blue);
+    transition: 0.15s ease;
+}
+.square:nth-child(1):hover {
+    transform: rotate(10deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(2) {
+    background: #0D6C7F;
+    transform: rotate(10deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(2):hover {
+    background: #0D6C7F;
+    transform: rotate(20deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(3) {
+    background: #0D7F7F;
+    transform: rotate(20deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(3):hover {
+    background: #0D7F7F;
+    transform: rotate(30deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(4) {
+    background: #24BDA3;
+    transform: rotate(30deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(4):hover {
+    transform: rotate(40deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(5) {
+    background: var(--green);
+    transform: rotate(40deg);
+    transition: 0.15s ease;
+}
+.square:nth-child(5):hover {
+    transform: rotate(50deg);
+    transition: 0.15s ease;
+}
 
+/*LATEST NEWS*/
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.news-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 12rem;
+    border-radius: 2rem;
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.50);
+    overflow: hidden;
+}
+.news-card figure {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+.news-card figure img {
+    width: 40rem;
+    height: 12rem;
+}
+.news-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70%;
+    height: 12rem;
+
+    text-align: justify;
+}
+.news-card-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 20rem;
+}
+.news-card-content h5 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    height: 4rem;
+}
+.news-card-content p {
+    font-size: 0.75rem;
+    height: 6rem;
+}
 
 /*MEDIA QUERIES*/
 @media (max-width: 1050px) {
@@ -526,5 +636,59 @@ nav {
     }
     .company-glimpse {
         width: 12rem;
+    }
+
+    /*LATEST NEWS*/
+    .news-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .news-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 27rem;
+        height: 10rem;
+        border-radius: 2rem;
+        box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.50);
+        overflow: hidden;
+    }
+    .news-card figure {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 30%;
+    }
+    .news-card figure img {
+        width: 40rem;
+        height: 12rem;
+    }
+    .news-card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 70%;
+        height: 12rem;
+
+        text-align: justify;
+    }
+    .news-card-content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 16rem;
+    }
+    .news-card-content h5 {
+        font-weight: 600;
+        font-size: 0.65rem;
+        height: 3rem;
+    }
+    .news-card-content p {
+        font-size: 0.5rem;
+        height: 4rem;
     }
 }
