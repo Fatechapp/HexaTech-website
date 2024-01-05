@@ -381,6 +381,9 @@ nav {
 .value-list h3:nth-child(4) {
     color: var(--purple);
 }
+.value-square {
+    position: relative;
+}
 
 /*PARTNERS*/
 #partners {
@@ -509,6 +512,16 @@ nav {
 }
 
 /*LATEST NEWS*/
+#latest-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+#latest-news h2 {
+    margin-left: 3rem;
+}
 .news-container {
     display: flex;
     flex-wrap: wrap;
@@ -560,6 +573,20 @@ nav {
 .news-card-content p {
     font-size: 0.75rem;
     height: 6rem;
+}
+
+/*CONTACT US*/
+#contact-us {
+    padding: 10rem 0;
+}
+
+/*FOOTER*/
+footer {
+    background: var(--black);
+    color: var(--white);
+}
+footer a {
+    color: var(--white);
 }
 
 /*MEDIA QUERIES*/
