@@ -584,9 +584,40 @@ nav {
 footer {
     background: var(--black);
     color: var(--white);
+    padding: 4rem 0;
+}
+.footer-content-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.footer-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.list-link {
+    display: flex;
+    flex-direction: column;
 }
 footer a {
     color: var(--white);
+    transition: 0.15s ease-in;
+}
+footer a:hover {
+    color: var(--green);
+    transition: 0.15s ease-in;
 }
 
 /*MEDIA QUERIES*/
@@ -718,5 +749,10 @@ footer a {
     .news-card-content p {
         font-size: 0.5rem;
         height: 4rem;
+    }
+}
+@media (max-width: 445px) {
+    .footer-content {
+        align-items: flex-start;
     }
 }
